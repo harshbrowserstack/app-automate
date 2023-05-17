@@ -1,0 +1,33 @@
+{
+  "name": "app-automate-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "npx wdio ./local.conf.js",
+    "remote": "BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY BROWSERSTACK_APP_ID=$BROWSERSTACK_APP_ID npx wdio ./remote.conf.js",
+    "remote-parallel": "BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY BROWSERSTACK_APP_ID=$BROWSERSTACK_APP_ID npx wdio ./remote.parallel.conf.js",
+    "upload-app": "export BROWSERSTACK_APP_ID=$((curl -u \"$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY\" -X POST \"https://api-cloud.browserstack.com/app-automate/upload\" -F \"file=@./WikipediaSample.apk\") | grep -o '\"app_url\":\"[^\"]*' | grep -o '[^\"]*$')",
+    "xcuitest": "sh XCUITest.sh",
+    "espresso": "sh Espresso.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.10.2",
+    "@wdio/cli": "^8.10.2",
+    "@wdio/local-runner": "^8.10.2",
+    "@wdio/mocha-framework": "^8.10.2",
+    "@wdio/spec-reporter": "^8.10.2",
+    "appium": "^1.22.3",
+    "appium-uiautomator2-driver": "^2.24.0",
+    "webdriverio": "^8.10.1"
+  },
+  "dependencies": {
+    "browserstack-local": "^1.5.2",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "wd": "^1.14.0",
+    "wdio": "^6.0.1"
+  }
+}
