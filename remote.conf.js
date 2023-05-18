@@ -14,7 +14,7 @@ exports.config = {
     name: 'Remote test - Wikipedia',
     device: 'Google Pixel 3',
     os_version: "9.0",
-    app: process.env.BROWSERSTACK_APP_ID,
+    app: "bs://284a2d86e26af2470d8353729ce13efdb28bb4b9",
     'browserstack.debug': true
   }],
 

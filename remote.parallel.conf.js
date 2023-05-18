@@ -13,7 +13,7 @@ exports.config = {
     project: "App automate assignment",
     build: 'App automate assignment - parallel',
     name: 'Remote paralle test - Wikipedia',
-    app: process.env.BROWSERSTACK_APP_ID,
+    app: "bs://284a2d86e26af2470d8353729ce13efdb28bb4b9",
     'browserstack.debug': true
   },
 
