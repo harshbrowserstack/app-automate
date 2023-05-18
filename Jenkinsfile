@@ -17,7 +17,7 @@ pipeline {
                         #echo "node and npm installed"
 
                         #nvm install 16.20.0
-                        #nvm use 16.20.0
+                        nvm use 16.20.0
                         node -v
                         #npm -v
                         
