@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "local": "npx wdio ./local.conf.js",
-    "remote": "BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY BROWSERSTACK_APP_ID=$BROWSERSTACK_APP_ID npx wdio ./remote.conf.js",
+    "remote": "BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY npx wdio ./remote.conf.js",
     "remote-parallel": "BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY BROWSERSTACK_APP_ID=$BROWSERSTACK_APP_ID npx wdio ./remote.parallel.conf.js",
     "upload-app": "export BROWSERSTACK_APP_ID=$((curl -u \"$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY\" -X POST \"https://api-cloud.browserstack.com/app-automate/upload\" -F \"file=@./WikipediaSample.apk\") | grep -o '\"app_url\":\"[^\"]*' | grep -o '[^\"]*$')",
     "xcuitest": "sh XCUITest.sh",
