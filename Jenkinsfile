@@ -29,7 +29,7 @@ pipeline {
                         #npm install
                         # npm init wdio .
                         #echo "npm install completed"
-                        npm run remote
+                        npm run remote-parallel
                        
                     '''
                 }
