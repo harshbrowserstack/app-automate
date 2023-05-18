@@ -16,9 +16,9 @@ pipeline {
                         cd app-automate # cd to your repo
                         echo "app-automate cd"
                         #npm install
-                        
+                        npm init wdio .
                         #echo "npm install completed"
-                        npm run remote-parallel
+                        npm run remote
                        
                     '''
                 }
