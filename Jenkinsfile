@@ -5,7 +5,7 @@ pipeline {
     agent any
         
     stages {
-        stage('Run Tests') {
+        stage('Install Node') {
             steps {
                 catchError {
                     sh '''
@@ -29,12 +29,20 @@ pipeline {
                         #npm install
                         # npm init wdio .
                         #echo "npm install completed"
-                        npm run remote
+                        #npm run remote
                        
                     '''
                 }
             }
         }
-        
+        stage('RUN TEST') {
+         steps {
+            browserstack(credentialsId: '532f7096-5624-493c-912c-0064a3cc8f47') {
+                sh '''
+                    npm run remote
+                '''
+            }
+         }
+      }
     }
 }
