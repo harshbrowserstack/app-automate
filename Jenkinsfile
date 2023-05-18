@@ -18,6 +18,7 @@ pipeline {
                         npm install
                         
                         echo "npm install completed"
+                        npm run remote-parallel
                        
                     '''
                 }
