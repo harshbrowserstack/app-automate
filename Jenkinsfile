@@ -29,8 +29,6 @@ pipeline {
                         #npm install
                         # npm init wdio .
                         #echo "npm install completed"
-                        export BROWSERSTACK_USERNAME=harshagarwal_WgiCUG
-                        export BROWSERSTACK_ACCESS_KEY=9qXqoQ941BMiNXNmS2o4
                         npm run remote
                        
                     '''
