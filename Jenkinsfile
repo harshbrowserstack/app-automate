@@ -29,6 +29,7 @@ pipeline {
                         #npm install
                         # npm init wdio .
                         #echo "npm install completed"
+                        npm run upload-app
                         npm run remote
                        
                     '''
