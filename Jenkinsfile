@@ -8,7 +8,7 @@ pipeline {
         
         stage('RUN TEST') {
          steps {
-            browserstack(credentialsId: '532f7096-5624-493c-912c-0064a3cc8f47') {
+            browserstack(credentialsId: '2f82e5e8-7818-433d-bfc4-250ea1e6adb1') {
                 sh '''
                     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
                     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
